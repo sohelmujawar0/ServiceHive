@@ -3,7 +3,7 @@ export default function Hero(){
            <h1 className="text-5xl text-amber-500 "><i>Reliable Home Services, Just a Click Away</i></h1>
            <p className="text-[22px] " >Book trusted plumbing, electrical, cleaning,
              and other home services in minutes.</p>
-              <input type="checkbox" id="bookNowToggle" className="peer hidden" />
+            <input type="checkbox" id="bookNowToggle" className="peer hidden" />
 
       <label
         htmlFor="bookNowToggle"

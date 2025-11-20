@@ -1,26 +1,33 @@
-export default function Navbar() {
+export default function Navbar({refs}) {
+  const scrollTo = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <nav className="flex gap-10 justify-between items-center mt-3.5">
       <h1 className="ml-3 text-4xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
         <i>ServiceHive</i>
       </h1>
 
-      <a href="#" className="relative text-gray-800 font-medium group">
+      <a href="#" className="relative text-gray-800 font-medium group"
+      onClick={() => scrollTo(refs.homeRef)}>
         Home
         <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
       </a>
 
-      <a href="#" className="relative text-gray-800 font-medium group">
+      <a href="#" className="relative text-gray-800 font-medium group"
+      onClick={() => scrollTo(refs.servicesRef)}>
         Services
         <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
       </a>
 
-      <a href="#" className="relative text-gray-800 font-medium group">
+      <a href="#" className="relative text-gray-800 font-medium group"
+      onClick={() => scrollTo(refs.howRef)}>
         How it works
         <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
       </a>
 
-      <a href="#" className="relative text-gray-800 font-medium group">
+      <a href="#" className="relative text-gray-800 font-medium group"
+      onClick={() => scrollTo(refs.testimonialRef)}>
         Testimonials
         <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
       </a>
