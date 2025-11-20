@@ -42,6 +42,15 @@ export default function Quotation() {
               <option>Cleaning</option>
               <option>Painting</option>
               <option>Carpentry</option>
+              <option>Gardening</option>
+              <option>Home Shifting</option>
+              <option>Geyser Service</option>
+              <option>Ro&Water Puriefier</option>
+              <option>Cctv Installition</option>
+              <option>Appliance Repair</option>
+              <option>Pest Control</option>
+              <option>Home Cleaning</option>
+              <option>Other</option>
             </select>
           </div>
 
