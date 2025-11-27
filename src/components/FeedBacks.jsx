@@ -1,5 +1,4 @@
 export default function CustomerFeedback() {
-  // Feedback list
   const feedbacks = [
     {
       name: "Ravi Kumar",
@@ -27,30 +26,25 @@ export default function CustomerFeedback() {
     <section className="py-20 bg-white">
 
       {/* Section Title */}
-      <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+      <h2 className="text-2xl sm:text-4xl font-bold text-center mb-12 text-gray-800">
         Customer Feedback
       </h2>
 
       {/* Feedback Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 px-6">
-
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 px-4 sm:px-6">
         {feedbacks.map((fb, index) => (
           <div
             key={index}
-            className="p-7 bg-gray-50 rounded-3xl shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="p-4 sm:p-7 bg-gray-50 rounded-3xl shadow-sm hover:shadow-md transition-shadow duration-300"
           >
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{fb.name}</h3>
+            <p className="text-xs sm:text-sm text-gray-500 mb-3">{fb.service}</p>
 
-            {/* Customer Name + Service */}
-            <h3 className="text-xl font-semibold text-gray-900">{fb.name}</h3>
-            <p className="text-sm text-gray-500 mb-4">{fb.service}</p>
-
-            {/* Message */}
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
               “{fb.message}”
             </p>
           </div>
         ))}
-
       </div>
     </section>
   );

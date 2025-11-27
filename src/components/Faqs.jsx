@@ -35,47 +35,47 @@ export default function FAQ() {
 
   return (
     <section className="py-20 bg-gray-50">
-      
-      {/* Section Heading */}
-      <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-        Frequently Asked Questions
-      </h2>
 
-      {/* FAQ Container */}
-      <div className="max-w-3xl mx-auto px-6 space-y-6">
+  <h2 className="text-2xl sm:text-4xl font-bold text-center mb-12 text-gray-800">
+    Frequently Asked Questions
+  </h2>
 
-        {faqs.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer"
-            onClick={() => toggleFAQ(index)}
+  <div className="max-w-3xl mx-auto px-4 sm:px-6 space-y-6">
+
+    {faqs.map((item, index) => (
+      <div
+        key={index}
+        onClick={() => toggleFAQ(index)}
+        className="bg-white p-4 sm:p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 cursor-pointer"
+      >
+        <div className="flex justify-between items-center">
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900">
+            {item.q}
+          </h3>
+
+          <span
+            className={`text-xl text-gray-500 transform transition-transform duration-300 ${
+              openIndex === index ? "rotate-180" : ""
+            }`}
           >
+            ▼
+          </span>
+        </div>
 
-            {/* Question Row */}
-            <div className="flex justify-between items-center">
-              <h3 className="text-lg font-semibold text-gray-900">
-                {item.q}
-              </h3>
-
-              {/* Toggle Icon */}
-              <span className="text-2xl text-gray-500">
-                {openIndex === index ? "−" : "+"}
-              </span>
-            </div>
-
-            {/* Answer Section (expands smoothly) */}
-            <div
-              className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index ? "max-h-40 mt-3" : "max-h-0"
-              }`}
-            >
-              <p className="text-gray-600">{item.a}</p>
-            </div>
-
-          </div>
-        ))}
+        <div
+          className={`overflow-hidden transition-all duration-300 ${
+            openIndex === index ? "max-h-screen mt-3" : "max-h-0"
+          }`}
+        >
+          <p className="text-gray-600 text-sm sm:text-base">
+            {item.a}
+          </p>
+        </div>
 
       </div>
-    </section>
+    ))}
+
+  </div>
+</section>
   );
 }

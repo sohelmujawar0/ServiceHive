@@ -1,14 +1,13 @@
 export default function Quotation() {
   return (
-    <section
-      className="min-h-screen bg-[#eef6ff] pt-28 pb-16 px-6"
-    >
+    <section className="min-h-screen bg-[#eef6ff] pt-28 pb-16 px-6">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-10">
         Request a Free Quote
       </h1>
 
       <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-8">
         <form className="grid gap-6">
+
           <div>
             <label className="block mb-1 font-semibold text-gray-700">
               Full Name
@@ -45,8 +44,8 @@ export default function Quotation() {
               <option>Gardening</option>
               <option>Home Shifting</option>
               <option>Geyser Service</option>
-              <option>Ro&Water Puriefier</option>
-              <option>Cctv Installition</option>
+              <option>RO & Water Purifier</option>
+              <option>CCTV Installation</option>
               <option>Appliance Repair</option>
               <option>Pest Control</option>
               <option>Home Cleaning</option>
@@ -82,6 +81,7 @@ export default function Quotation() {
           >
             Get Quote
           </button>
+
         </form>
       </div>
     </section>
